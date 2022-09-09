@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import '../styles/App.css';
 
-constructor(props) {
+class App extends Component {
+    constructor(props) {
 		super(props);
 		this.state={
 			text:""
@@ -25,6 +26,4 @@ constructor(props) {
 
 
 export default App;
-
-
 
