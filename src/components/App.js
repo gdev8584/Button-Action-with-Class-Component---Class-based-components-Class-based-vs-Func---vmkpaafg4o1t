@@ -1,26 +1,22 @@
-import React, {Component} from "react";
+import React, {Component, useState} from "react";
 import '../styles/App.css';
 
 class App extends Component {
     constructor(props) {
 		super(props);
-		this.state={
-      			id:"",
-			text:""
-		}
+	    this.state = {
+	    text: "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy",
+		    click : 0
+	    
+	    }
 	};
 
     render() {
-		const handleClick=()=>{
-			this.setState({
-        			id:'para',
-				text:"Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-			})
-		}
     	return(
     		<div id="main">
-				<p id={this.state.id}>{this.state.text}</p>
-				<button id='click' onClick={handleClick}>Click</button>
+				{ /* Do not remove this main div!! */ }
+	<button id="click" onClick={() => this.setState({count: this.state.count + 1 })}>Button</button>
+    <h6 id="para">{this.state.text}</h6>
     		</div>
     	);
     }
@@ -28,4 +24,3 @@ class App extends Component {
 
 
 export default App;
-
